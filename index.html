@@ -1,0 +1,541 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Προσομειώσεις Φυσικής Γ Λυκείου</title>
+<style type="text/css">
+	body,td,th {
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	}
+	.container {
+		display:                 flex;
+		display:                 -webkit-flex; /* Safari 8 */
+		flex-wrap:               wrap;
+		-webkit-flex-wrap:       wrap;         /* Safari 8 */
+		justify-content:         center;
+		-webkit-justify-content: center;       /* Safari 8 */
+	}
+
+	.block {
+		margin: 10px;        
+		width: 400px;
+		text-align: center;
+	}
+	
+	.btn {
+		width: 200px;
+		border: none;
+		color: white;
+		padding: 15px;
+		font-size: 16px;
+		cursor: pointer;
+		margin: 2px;
+	}
+	
+	.electromagnetic {background-color: #cc00ff;} /* Blue */
+	.electromagnetic:hover {background: #8f00b3;}
+	.electromagnetic:active {color: #000000; background-color:dodgerblue;  }
+	
+	.vibrations {background-color: #0066ff;} /* Blue */
+	.vibrations:hover {background: #0052cc;}
+	.vibrations:active {color: #000000; background-color:dodgerblue;  }
+
+	.waves {background-color: #ff9800;} /* Orange */
+	.waves:hover {background: #e68a00;}
+	.waves:active {color: #000000; background-color:darkorange;  }
+
+	.Doppler {background-color: #f44336;} /* Red */ 
+	.Doppler:hover {background: #da190b;}
+	.Doppler:active {color: #000000; background-color:firebrick;  }
+	
+	.Fluid {background-color: #717eca;} /* Red */ 
+	.Fluid:hover {background: #007eca;}
+	.Fluid:active {color: #000000; background-color:#6666ff;  }
+
+	.RigidBody {background-color:darkslateblue;} /* Gray */ 
+	.RigidBody:hover {background: indigo;}
+	.RigidBody:active {color:#000000; background-color:darkblue;  }
+	
+	.collision {background-color: #4CAF50;} /* Green */
+	.collision:hover {background-color: #46a049;}
+	.collision:active {color: #000000; background-color:green;  }
+	
+	
+	#topBtn {
+		display: none; /* Hidden by default */
+		position: fixed; /* Fixed/sticky position */
+		bottom: 10px; /* Place the button at the bottom of the page */
+		right: 10px; /* Place the button 30px from the right */
+		z-index: 99; /* Make sure it does not overlap */
+		border: none; /* Remove borders */
+		outline: none; /* Remove outline */
+		background-color: red; /* Set a background color */
+		color: white; /* Text color */
+		cursor: pointer; /* Add a mouse pointer on hover */
+		padding: 10px; /* Some padding */
+		border-radius: 3px; /* Rounded corners */
+		font-size: 16px; /* Increase font size */
+	}
+
+	#topBtn:hover {
+		background-color: #555; /* Add a dark-grey background on hover */
+	}
+	
+</style>
+	
+	<script>
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				document.getElementById("topBtn").style.display = "block";
+			} else {
+				document.getElementById("topBtn").style.display = "none";
+			}
+		}
+
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+			document.body.scrollTop = 0; // For Safari
+			document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+		} 
+	</script>
+</head>
+
+<body >
+	<button onclick="topFunction()" id="topBtn">Top</button>
+	
+	
+	<div align="center">
+		<a href="#electromagneticID"><button class="btn electromagnetic">Ηλεκτρομαγνητισμός</button></a>
+		<a href="#vibratiosID"><button class="btn vibrations">Ταλαντώσεις</button></a>
+		<!---->
+		<a href="#wavesID"><button class="btn waves">Κύματα</button></a>
+		<a href="#DopplerID"><button class="btn Doppler">Quantum</button></a>
+		<!---->
+		<a href="#FluidID"><button class="btn Fluid">Ρευστά</button></a>
+		<a href="#rigidBodyID"><button class="btn RigidBody">Στερεό Σώμα</button></a>
+		<a href="#collisionID"><button class="btn collision">Κρούσεις</button></a>
+	</div>
+	<hr/>
+	
+	<div id="electromagneticID">
+		<div align="center">
+			<h1 style="color:white;background-color:#cc00ff" onclick="topFunction()">Ηλεκτρομαγνητισμός</h2>
+		</div>
+		<div class="container">
+			<div class="block">
+				<a href="gl-html5/magnet3DText.html" target="_blank"> <img border="2" src="gl-html5/files/images/magnet3D.png"  width="400" height="auto"></a>
+				<br>Μαγνητικό Δίπολο
+			</div>
+			<div class="block">
+				<a href="gl-html5/magneticFieldLinear3DText.html" target="_blank"> <img border="2" src="gl-html5/files/images/magneticFieldLinear3D.png"  width="400" height="auto"></a>
+				<br>Πείραμα του Oersted, Μαγνητικό πεδίο Ευθύγραμμου Αγωγού
+			</div>
+			<!--
+			<div class="block">
+				<a href="gl-html5/magneticFieldCircular3D.html" target="_blank"> <img border="2"  src="gl-html5/files/images/magneticFieldCircular3D.png"   width="400" height="auto"></a>
+				<br>Μαγνητικό Πεδίο Κυκλικού Αγωγού
+			</div>
+			-->
+			<div class="block">
+				<a href="gl-html5/magneticFieldCircular2-3DText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/magneticFieldCircular2-3D.png"  width="400" height="auto"></a>
+				<br>Μαγνητικό Πεδίο Κυκλικού Αγωγού
+			</div>
+			<div class="block">
+				<a href="gl-html5/combinationLinearCircle1Text.html" target="_blank"> <img border="2"  src="gl-html5/files/images/combinationLinearCircle1.png"  width="400" height="auto"></a>
+				<br>Ευθύγραμμος και Κυκλικός ρευματοφόρος αγωγός
+			</div>
+			<div class="block">
+				<a href="gl-html5/combinationLinearCircle2Text.html" target="_blank"> <img border="2"  src="gl-html5/files/images/combinationLinearCircle2.png"  width="400" height="auto"></a>
+				<br>Ευθύγραμμος και Κυκλικός ρευματοφόρος αγωγός
+			</div>
+			<div class="block">
+				<a href="gl-html5/combinationCircleCircleText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/combinationCircleCircle.png"  width="400" height="auto"></a>
+				<br>Κυκλικοί ρευματοφόροι αγωγοί
+			</div>
+			<div class="block">
+				<a href="gl-html5/combinationLinearCircleText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/combinationLinearCircle.png"  width="400" height="auto"></a>
+				<br>Ευθύγραμμοι και Κυκλικός ρευματοφόρος αγωγός
+			</div>
+			<div class="block">
+				<a href="gl-html5/magneticFieldCoil3DText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/magneticFieldCoil3D.png"   width="400" height="auto"></a>
+				<br>Μαγνητικό Πεδίο Σωληνοειδούς
+			</div>
+			<div class="block">
+				<a href="gl-html5/laplaceForce3DText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/laplaceForce3D.png"   width="400" height="auto"></a>
+				<br>Δύναμη Laplace
+			</div>
+			<div class="block">
+				<a href="gl-html5/laplaceForce3D-2Text.html" target="_blank"> <img border="2"  src="gl-html5/files/images/laplaceForce3D-2.png"   width="400" height="auto"></a>
+				<br>Δύναμη Laplace
+			</div>
+			<div class="block">
+				<a href="gl-html5/forcesBetweenCurrents3DText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/forcesBetweenCurrents3D.png"   width="400" height="auto"></a>
+				<br>Δυνάμεις μεταξύ Ρευμάτων
+			</div>
+			<div class="block">
+				<a href="gl-html5/flux3DText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/flux3D.png"   width="400" height="auto"></a>
+				<br>Μαγνητική Ροή
+			</div>
+			
+			<div class="block">
+				<a href="gl-html5/faradayLawText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/faradayLaw.png"   width="400" height="auto"></a>
+				<br>Νόμος Faraday
+			</div>
+			
+			<div class="block">
+				<a href="gl-html5/FaradayLaw3DText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/FaradayLaw3D.png"   width="400" height="auto"></a>
+				<br>Νόμος Faraday
+			</div>
+			
+			<div class="block">
+				<a href="gl-html5/FaradayLawRing3DText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/FaradayLawRing3D.png"   width="400" height="auto"></a>
+				<br>Νόμος Faraday
+			</div>
+			
+			<div class="block">
+				<a href="gl-html5/faraday2Text.html" target="_blank"> <img border="2"  src="gl-html5/files/images/faraday2.png" width="400" height="auto"></a>
+				<br>Νόμος Faraday - Κανόνας του Lentz
+			</div>
+			
+			<div class="block">
+				<a href="gl-html5/emiText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/emi.png" width="400" height="auto"></a>
+				<br>ΗΕΔ από επαγωγή
+			</div>
+			
+			<div class="block">
+				<a href="gl-html5/emi2Text.html" target="_blank"> <img border="2"  src="gl-html5/files/images/emi2.png" width="400" height="auto"></a>
+				<br>ΗΕΔ από επαγωγή
+			</div>
+			
+			<div class="block">
+				<a href="gl-html5/generator3DText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/generator3D.png"   width="400" height="auto"></a>
+				<br>Γεννήτρια
+			</div>
+			<div class="block">
+				<a href="gl-html5/motor3DText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/motor3D.png"   width="400" height="auto"></a>
+				<br>DC Κινητήρας
+			</div>
+			<div class="block">
+				<a href="gl-html5/acText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/ac.png"   width="400" height="auto"></a>
+				<br>Εναλλασσόμενο Ρεύμα
+			</div>
+			<div class="block">
+				<a href="gl-html5/acdcText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/acdc.png"   width="400" height="auto"></a>
+				<br>Ενεργός Τάση Εναλλασσομένου Ρεύματος
+			</div>
+		</div>
+		
+	</div>
+	
+	<div id="vibratiosID">
+		<div align="center">
+			<h1 style="color:white;background-color:#0066ff" onclick="topFunction()">Ταλαντώσεις</h2>
+		</div>
+		<div class="container">
+			<div class="block">
+				<a href="gl-html5/oscillationText.html" target="_blank"> <img border="2" src="gl-html5/files/images/oscillation.png"  width="400" height="auto"></a>
+				<br>Απλή αρμονική ταλάντωση (Γεωμετρική Προσέγγιση)
+			</div>
+			<div class="block">
+				<a href="gl-html5/oscillation2Text.html" target="_blank"> <img border="2"  src="gl-html5/files/images/oscillation2.png"   width="400" height="auto"></a>
+				<br>Απλή Αρμονική Ταλάντωση (Δυναμική Προσέγγιση)
+			</div>
+			<div class="block">
+				<a href="gl-html5/oscillation3Text.html" target="_blank"> <img border="2"  src="gl-html5/files/images/oscillation3.png"   width="400" height="auto"></a>
+				<br>Απλή Αρμονική Ταλάντωση (Δυναμική Προσέγγιση)
+			</div>
+			<div class="block">
+				<a href="gl-html5/rotatingVectorsText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/rotatingVectors.png"   width="400" height="auto"></a>
+				<br>Περιστρεφόμενα Διανύσματα και Ταλάντωση
+			</div>
+			<div class="block">
+				<a href="gl-html5/verticalSpringText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/verticalSpring.png"   width="400" height="auto"></a>
+				<br>Ταλάντωση ενός Σώματος σε Κατακόρυφο Ελατήριο
+			</div>
+			<div class="block">
+				<a href="gl-html5/vibrationCollisionText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/vibrationCollision.png"   width="400" height="auto"></a>
+				<br>Ταλάντωση και πλαστική κρούση
+			</div>
+			<div class="block">
+				<a href="gl-html5/lostContactText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/lostContact.png"   width="400" height="auto"></a>
+				<br>Απώλεια Επαφής
+			</div>
+			<div class="block">
+				<a href="gl-html5/dampedOscillationText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/dampedOscillation.png"  width="400" height="auto"></a>
+				<br>Φθίνουσα Ταλάντωση
+			</div>
+			<div class="block">
+				<a href="gl-html5/forcedVibrationText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/forcedVibration.png"   width="400" height="auto"></a>
+				<br>Εξαναγκασμένη Ταλάντωση
+			</div>
+			<div class="block">
+				<a href="gl-html5/compositionOscillationsText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/compositionOscillations.png"   width="400" height="auto"></a>
+				<br>Σύνθεση Ταλαντώσεων
+			</div>
+			<div class="block">
+				<a href="gl-html5/beatsText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/beats.png"   width="400" height="auto"></a>
+				<br>Διακρότημα
+			</div>
+		</div>
+		
+	</div>
+	
+	<!---->
+	<div id="wavesID" >
+		<div align="center">
+			<h1 style="color:white;background-color:#ff9800" onclick="topFunction()">Κύματα</h2>
+		</div>
+		<div class="container" >
+			<div class="block">
+				<a href="gl-html5/waves.html" target="_blank"> <img border="2" src="gl-html5/files/images/waves.png"  width="400" height="auto"></a>
+				<br>Κύματα
+			</div>
+			<div class="block">
+				<a href="gl-html5/transverseWaves.html" target="_blank"> <img border="2" src="gl-html5/files/images/transverseWaves.png"  width="400" height="auto"></a>
+				<br>Εγκάρσια Κύματα
+			</div>
+			<div class="block">
+				<a href="gl-html5/waves3D.html" target="_blank"> <img border="2"  src="gl-html5/files/images/waves3D.png"   width="400" height="auto"></a>
+				<br>Επιφανειακά Κύματα
+			</div>
+			<div class="block">
+				<a href="gl-html5/longitudinalWaves.html" target="_blank"> <img border="2"  src="gl-html5/files/images/longitudinalWaves.png"  width="400" height="auto"></a>
+				<br>Διαμήκη Κύματα
+			</div>
+			<div class="block">
+				<a href="gl-html5/fourierWaves.html" target="_blank"> <img border="2"  src="gl-html5/files/images/fourierWaves.png"   width="400" height="auto"></a>
+				<br>Μη Αρμονικά Κύματα
+			</div>
+			<div class="block">
+				<a href="gl-html5/phaseWave.html" target="_blank"> <img border="2"  src="gl-html5/files/images/phaseWave.png"  width="400" height="auto"></a>
+				<br>Φάση Κύματος
+			</div>
+			
+			<div class="block">
+				<a href="gl-html5/addWaves.html" target="_blank"> <img border="2"  src="gl-html5/files/images/addWaves.png"  width="400" height="auto"></a>
+				<br>Επαλληλία Κυμάτων
+			</div>
+			
+			<div class="block">
+				<a href="gl-html5/interference.html" target="_blank"> <img border="2"  src="gl-html5/files/images/interference.png"   width="400" height="auto"></a>
+				<br>Συμβολή Κυμάτων
+			</div>
+			<div class="block">
+				<a href="gl-html5/interference3D.html" target="_blank"> <img border="2"  src="gl-html5/files/images/interference3D.png"   width="400" height="auto"></a>
+				<br>Συμβολή Κυμάτων 3D
+			</div>
+			
+			<div class="block">
+				<a href="gl-html5/standingWaves.html" target="_blank"> <img border="2"  src="gl-html5/files/images/standingWaves.png"   width="400" height="auto"></a>
+				<br>Στάσιμα Κύματα
+			</div>
+			<div class="block">
+				<a href="gl-html5/standingWaves2Waves.html" target="_blank"> <img border="2"  src="gl-html5/files/images/standingWaves2Waves.png"   width="400" height="auto"></a>
+				<br>Δημιουργία Στάσιμου Κύματος
+			</div>
+
+			<div class="block">
+				<a href="gl-html5/standingWavesReflection.html" target="_blank"> <img border="2" src="gl-html5/files/images/standingWavesReflection.png"  width="400" height="auto"></a>
+				<br>Δημιουργία Στάσιμου Κύματος από Ανάκλαση
+			</div>
+			<div class="block">
+				<a href="gl-html5/standigWavesFixEnd.html" target="_blank"> <img border="2"  src="gl-html5/files/images/standigWavesFixEnd.png"   width="400" height="auto"></a>
+				<br>Στάσιμο κύμα σε χορδή με ακλόνητα άκρα
+			</div>
+			
+			
+		</div>
+		
+	</div>
+	
+	
+	<div id="DopplerID">
+		<div align="center">
+			<h1 style="color:white;background-color:#f44336" onclick="topFunction()">Quantum</h2>
+		</div>
+		<div class="container">
+			<div class="block">
+				<a href="gl-html5/doppler.html" target="_blank"> <img border="2" src="gl-html5/files/images/doppler.jpg"  width="400" height="auto"></a>
+				<br>Black Body
+			</div>
+			<div class="block">
+				<a href="gl-html5/dopplerSound.html" target="_blank"> <img border="2"  src="gl-html5/files/images/dopplerSound.jpg"   width="400" height="auto"></a>
+				<br>Φωτοηλεκτρικό
+			</div>
+			<div class="block">
+				<a href="gl-html5/dopplerVibration.html" target="_blank"> <img border="2"  src="gl-html5/files/images/dopplerVibration.png"  width="400" height="auto"></a>
+				<br>Μοντέλο Ατόμου Υδρογόνου
+			</div>
+		</div>
+	</div>
+	<!---->
+	
+	
+	<div id="FluidID">
+		<div align="center">
+			<h1 style="color:white;background-color:#717eca" onclick="topFunction()">Ρευστά</h2>
+		</div>
+		<div class="container">
+			<div class="block">
+				<a href="gl-html5/pressureText.html" target="_blank"> <img border="2" src="gl-html5/files/images/pressure.png"  width="400" height="auto"></a>
+				<br>Ρευστό σε Ισορροπία (Βασική εξίσωση Υδροστατικής)
+			</div>
+			<div class="block">
+				<a href="gl-html5/bernoulliEquationText.html" target="_blank"> <img border="2" src="gl-html5/files/images/bernoulliEquation.png"  width="400" height="auto"></a>
+				<br>Εξίσωση Bernoulli
+			</div>
+			<div class="block">
+				<a href="gl-html5/torricelliText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/torricelli.png"   width="400" height="auto"></a>
+				<br>Θεώρημα Torricelli
+			</div>
+			<div class="block">
+				<a href="gl-html5/venturiEffectText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/venturiEffect.png"  width="400" height="auto"></a>
+				<br>Ροόμετρο Ventruri
+			</div>
+		</div>
+		
+	</div>
+	
+	
+	<div id="rigidBodyID" >
+		<div align="center">
+			<h1 style="color:white;background-color:darkslateblue" onclick="topFunction()">Στερεό Σώμα</h2>
+		</div>
+		
+		<div class="container" >
+			<div class="block">
+				<a href="gl-html5/circularΜotionText.html" target="_blank"> <img border="2" src="gl-html5/files/images/circularΜotion.png"  width="400" height="auto"></a>
+				<br>Κυκλική Κίνηση
+			</div>
+			<div class="block">
+				<a href="gl-html5/motionAnalysisText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/motionAnalysis.png"   width="400" height="auto"></a>
+				<br>Ανάλυση Κίνησης Στερεού
+			</div>
+			<div class="block">
+				<a href="gl-html5/solidMove3DText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/solidMove3D.png"   width="400" height="auto"></a>
+				<br>Κίνηση Στερεού
+			</div>
+			<div class="block">
+				<a href="gl-html5/complexMotionText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/complexMotion.png"  width="400" height="auto"></a>
+				<br>Σύνθετη Κίνηση
+			</div>
+			<div class="block">
+				<a href="gl-html5/rigidBodyText.html" target="_blank"> <img border="2" src="gl-html5/files/images/rigidBody.png"  width="400" height="auto"></a>
+				<br>Ταχύτητες κατά την Περιστροφή ενός Τροχού
+			</div>
+			<div class="block">
+				<a href="gl-html5/torque3DText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/torque3D.png"  width="400" height="auto"></a>
+				<br>Ροπή Δύναμης
+			</div>
+			<div class="block">
+				<a href="gl-html5/rotationInertia3DText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/rotationInertia3D.png"  width="400" height="auto"></a>
+				<br>Ροπή Αδράνειας
+			</div>
+			<div class="block">
+				<a href="gl-html5/rotationSecondLaw3DText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/rotationSecondLaw3D.png"  width="400" height="auto"></a>
+				<br>2ος Νόμος του Νεύτωνα στην Περιστροφική Κίνηση
+			</div>
+			<div class="block">
+				<a href="gl-html5/rollingInclinePlaneText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/rollingInclinePlane.png"   width="400" height="auto"></a>
+				<br>Κίνηση Τροχού σε Κεκλιμένο Επίπεδο 
+			</div>
+			<div class="block">
+				<a href="gl-html5/rollingInPlaneText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/rollingInPlane.png"   width="400" height="auto"></a>
+				<br>Κύλιση και Ολίσθηση Τροχού σε Οριζόντιο Επίπεδο 
+			</div>
+			<div class="block">
+				<a href="gl-html5/semiCircleText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/semiCircle.png"   width="400" height="auto"></a>
+				<br>Κύλιση Σφαίρας σε Ημικύκλιο
+			</div>
+			<div class="block">
+				<a href="gl-html5/jointForcesText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/jointForces.png"  width="400" height="auto"></a>
+				<br>Δυνάμεις στην Άρθρωση κατά την Περιστροφή μιας Ράβδου
+			</div>
+			<div class="block">
+				<a href="gl-html5/spinner3DText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/spinner3D.png"  width="400" height="auto"></a>
+				<br>Στροφορμή και Ροπή Δύναμης
+			</div>
+			<div class="block">
+				<a href="gl-html5/conservationOfAngularMomentum-ii-3DText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/conservationOfAngularMomentum-ii-3D.png"  width="400" height="auto"></a>
+				<br>Διατήρηση Στροφορμής κατά την ανακατανομή μαζών
+			</div>
+			<div class="block">
+				<a href="gl-html5/collisionAngularMomentrum3DText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/collisionAngularMomentrum3D.png"  width="400" height="auto"></a>
+				<br>Διατήρηση Στροφορμής κατά την πτώση σώματος
+			</div>
+			<div class="block">
+				<a href="gl-html5/collisionAndConservationOfAngularMomentumText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/collisionAndConservationOfAngularMomentum.png"  width="400" height="auto"></a>
+				<br>Διατήρηση Στροφορμής κατά την κρούση σφαίρας με ράβδο
+			</div>
+			<div class="block">
+				<a href="gl-html5/sunExpandText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/sunExpand.png"  width="400" height="auto"></a>
+				<br>Διατήρηση Στροφορμής κατά την μεταβολή της ακτίνας ενός αστεριού
+			</div>
+			
+			<div class="block">
+				<a href="gl-html5/keplerText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/kepler.png"  width="400" height="auto"></a>
+				<br>Διατήρηση Στροφορμής κατά την κίνηση σε πεδίο Βαρύτητας
+			</div>
+			<div class="block">
+				<a href="gl-html5/conservationOfAngularMomentum3D-1Text.html" target="_blank"> <img border="2"  src="gl-html5/files/images/conservationOfAngularMomentum3D-1.png"  width="400" height="auto"></a>
+				<br>Διατήρηση Στροφορμής
+			</div>
+			
+			<div class="block">
+				<a href="gl-html5/wheelText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/wheel.png"  width="400" height="auto"></a>
+				<br>Το Καρούλι
+			</div>
+			<div class="block">
+				<a href="gl-html5/workText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/work.png"  width="400" height="auto"></a>
+				<br>Έργο και Ισχύς Δύναμης
+			</div>
+			<div class="block">
+				<a href="gl-html5/rigidBodyEnergyText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/rigidBodyEnergy.png"  width="400" height="auto"></a>
+				<br>Θεώρημα Έργου Ενέργειας
+			</div>
+			<div class="block">
+				<a href="gl-html5/yoyo3DText.html" target="_blank"> <img border="2"  src="gl-html5/files/images/yoyo3D.png"  width="400" height="auto"></a>
+				<br>Το Καρούλι
+			</div>
+			
+		</div>
+	</div>
+	
+	
+	<div id="collisionID" >
+		<div align="center">
+			<h1 style="color:white;background-color:#4CAF50" onclick="topFunction()">Κρούσεις</h2>
+		</div>
+		
+		<div class="container" >
+			<div class="block">
+				<a href="gl-html5/collisionsText.html" target="_blank"> <img border="2" src="gl-html5/files/images/collisions.png"  width="400" height="auto"></a>
+				<br>Ελαστική Κρούση
+			</div>
+			
+			<div class="block">
+				<a href="gl-html5/plasticCollisionText.html" target="_blank"> <img border="2" src="gl-html5/files/images/plasticCollision.png"  width="400" height="auto"></a>
+				<br>Πλαστική - Ελαστική - Ανελαστική Κρούση
+			</div>
+			
+			<div class="block">
+				<a href="gl-html5/elasticCollisionEqualText.html" target="_blank"> <img border="2" src="gl-html5/files/images/elasticCollisionEqual.png"  width="400" height="auto"></a>
+				<br>Ισοδύναμο Ελαστικής Κρούσης
+			</div>
+			
+			<div class="block">
+				<a href="gl-html5/spring2BodiesText.html" target="_blank"> <img border="2" src="gl-html5/files/images/spring2Bodies.png"  width="400" height="auto"></a>
+				<br>Δύο σώματα δεμένα στα άκρα ενός ελατηρίου
+			</div>
+			
+			
+		</div>
+		
+	
+	</div>
+
+</body>
+</html>
